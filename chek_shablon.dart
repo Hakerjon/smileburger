@@ -18,7 +18,7 @@ String chekError({required String chekMean}) {
   }
 }
 
-String chekSuccess({required String chekMatn1, required chekMatn2}) {
+String chekSuccess({required String chekMatn1, required String chekMatn2}) {
   if (chekMatn1.isNotEmpty) {
     final now = DateTime.now();
     String chekVaqti =
