@@ -1,13 +1,13 @@
-String chekError({required String chekMean}) {
-  if (chekMean.isNotEmpty) {
+String chekError({required String chekMatnError}) {
+  if (chekMatnError.isNotEmpty) {
     final now = DateTime.now();
     String chekVaqti =
         "${now.year}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')} ${now.hour.toString().padLeft(2, '0')}:${now.minute.toString().padLeft(2, '0')}";
     String chekMatni = '''
  _________________________
-|${chekVaqti}         |
+|    ${chekVaqti}     |
 |                         |
-|     ${chekMean.padLeft((20 + chekMean.length) ~/ 2).padRight(20)}
+| ${chekMatnError}
 |                         |
 |                         |
  _________________________
@@ -27,8 +27,8 @@ String chekSuccess({required String chekMatn1, required String chekMatn2}) {
  _________________________
 |${chekVaqti}         |
 |                         |
-|${chekMatn1.padLeft((20 + chekMatn1.length) ~/ 2).padRight(20)}
-|${chekMatn2.padLeft((20 + chekMatn2.length) ~/ 2).padRight(20)}
+|${chekMatn1}
+|${chekMatn2}
 |                         |
  _________________________
 ''';
@@ -41,7 +41,7 @@ String chekSuccess({required String chekMatn1, required String chekMatn2}) {
 }
 
 void main(List<String> args) {
-  print(chekError(chekMean: "Nimadir xato ketdimi"));
+  print(chekError(chekMatnError: "Nimadir xato ketdimi"));
   print(chekSuccess(
       chekMatn1: "Amaliyot muvaffaqiyatli", chekMatn2: "amalga oshirildi!"));
 }
