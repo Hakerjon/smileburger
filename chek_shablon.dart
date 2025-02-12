@@ -40,8 +40,31 @@ String chekSuccess({required String chekMatn1, required String chekMatn2}) {
   }
 }
 
+String MenuXoshiyali(
+    {required String matn1, matn2, matn3, matn4, matn5, matn6}) {
+  if (matn1.isNotEmpty) {
+    String stars = "*";
+    String chekMatni = '''
+${stars * 30}
+||    
+||                       
+||=> ${matn1}  => ${matn2}
+||=> ${matn3}  => ${matn4}
+||=> ${matn5}  => ${matn6}
+||
+||                       
+||             
+${stars * 30}
+''';
+    return chekMatni;
+  } else {
+    return "";
+  }
+}
+
 void main(List<String> args) {
   print(chekError(chekMatnError: "Nimadir xato ketdimi"));
   print(chekSuccess(
       chekMatn1: "Amaliyot muvaffaqiyatli", chekMatn2: "amalga oshirildi!"));
+  print(MenuXoshiyali(matn1: "Pul yechish", matn6: "Chiqish"));
 }
