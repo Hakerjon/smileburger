@@ -40,17 +40,16 @@ String chekSuccess({required String chekMatn1, required String chekMatn2}) {
   }
 }
 
-String MenuXoshiyali(
-    {required String matn1, matn2, matn3, matn4, matn5, matn6}) {
+String MenuXoshiyali({required matn1, matn2, matn3, matn4, matn5, matn6}) {
   if (matn1.isNotEmpty) {
     String stars = "*";
     String chekMatni = '''
 ${stars * 30}
 ||    
 ||                       
-||=>${matn1}     ${matn2??""}
-|| ${matn3??""}   ${matn4??""}
-|| ${matn5??""}   ${matn6??""}
+||=>${matn1}     ${matn2 ?? ""}
+|| ${matn3 ?? ""}   ${matn4 ?? ""}
+|| ${matn5 ?? ""}   ${matn6 ?? ""}
 ||
 ||                       
 ||             
@@ -63,8 +62,11 @@ ${stars * 30}
 }
 
 void main(List<String> args) {
-  print(chekError(chekMatnError: "Nimadir xato ketdimi"));
+  // print(chekError(chekMatnError: "Nimadir xato ketdimi"));
+  // print(chekSuccess(
+  //     chekMatn1: "Amaliyot muvaffaqiyatli", chekMatn2: "amalga oshirildi!"));
+  // print(MenuXoshiyali(matn1: "Pul yechish", matn6: "Chiqish"));
   print(chekSuccess(
-      chekMatn1: "Amaliyot muvaffaqiyatli", chekMatn2: "amalga oshirildi!"));
-  print(MenuXoshiyali(matn1: "Pul yechish", matn6: "Chiqish"));
+      chekMatn1: "to'lov muvaffaqiyatli", chekMatn2: "amalga oshiriladi"));
+  print(MenuXoshiyali(matn1: "Balansni ko'rish", matn2: "Pinni almashtirish"));
 }
