@@ -9,7 +9,7 @@ import 'chek_shablon.dart';
 // }
 
 void telNumberEditing([String? yangiTelNumber]) {
-  final homeCard = carta();
+  final homeCard = card();
   homeCard.cardTelNumber = 998903113010;
   String? joriyTelNumber;
   bool telRaqamChanged = true;
