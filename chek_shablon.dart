@@ -48,9 +48,9 @@ String MenuXoshiyali(
 ${stars * 30}
 ||    
 ||                       
-||=> ${matn1}  => ${matn2}
-||=> ${matn3}  => ${matn4}
-||=> ${matn5}  => ${matn6}
+||=>${matn1}     ${matn2??""}
+|| ${matn3??""}   ${matn4??""}
+|| ${matn5??""}   ${matn6??""}
 ||
 ||                       
 ||             
