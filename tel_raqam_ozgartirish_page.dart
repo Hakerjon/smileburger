@@ -8,27 +8,34 @@ import 'chek_shablon.dart';
 //   homeCard.cardTelNumber = 998903113010;
 // }
 
-String telNumberEditing([String? yangiTelNumber]) {
-  final homeCard = card();
+void telNumberEditing([String? yangiTelNumber]) {
+  final homeCard = carta();
   homeCard.cardTelNumber = 998903113010;
+  String? joriyTelNumber;
+  bool telRaqamChanged = true;
   print(MenuXoshiyali(matn1: "Joriy telefon raqamingizni kiriting: +"));
-  stdout.write("+ ");
-  String? joriyTelNumber = stdin.readLineSync();
-  if (joriyTelNumber == homeCard.cardTelNumber) {
-    print(joriyTelNumber);
-    print(MenuXoshiyali(matn1: "Endi yangi raqamingnizni kiriting: +"));
-    stdout.write("+");
-    yangiTelNumber = stdin.readLineSync();
-    yangiTelNumber = homeCard.cardTelNumber.toString();
-  } else {
-    print(MenuXoshiyali(matn2: joriyTelNumber = stdin.readLineSync()));
-    stdout.write("+");
-  }
-  return 
-   if (joriyTelNumber != homeCard.cardTelNumber) {
+  stdout.write("+");
+  joriyTelNumber = stdin.readLineSync();
+  while (telRaqamChanged)
+    if (joriyTelNumber == homeCard.cardTelNumber.toString()) {
+      print(MenuXoshiyali(matn1: "Endi yangi raqamingnizni kiriting: +"));
+      stdout.write("+");
+      yangiTelNumber = stdin.readLineSync();
+      print(MenuXoshiyali(
+          matn1: "Telefon raqami o'zgardi: ${yangiTelNumber} ga"));
+      yangiTelNumber = homeCard.cardTelNumber.toString();
 
+      telRaqamChanged = false;
+    } else {
+      print(MenuXoshiyali(
+          matn1: "Joriy telefon raqami noto'g'ri, iltimos qaytadan kiriting"));
+      stdout.write("+");
+      joriyTelNumber = stdin.readLineSync();
+      // telRaqamChanged = true;
+    }
+  // return MenuXoshiyali(matn1: "Telefon raqami muvaffaqiyatli o'zgartirildi");
 }
 
-void main(List<String> args) {
-  print(telNumberEditing());
-}
+// void main(List<String> args) {
+//   telNumberEditing();
+// }
