@@ -24,15 +24,12 @@ void telNumberEditing([String? yangiTelNumber]) {
       print(MenuXoshiyali(
           matn1: "Telefon raqami o'zgardi: ${yangiTelNumber} ga"));
       yangiTelNumber = homeCard.cardTelNumber.toString();
-
       telRaqamChanged = false;
     } else {
       print(MenuXoshiyali(
           matn1: "Joriy telefon raqami noto'g'ri, iltimos qaytadan kiriting"));
       stdout.write("+");
       joriyTelNumber = stdin.readLineSync();
-      userBaza() = joriyTelNumber;
-
       // telRaqamChanged = true;
     }
   // return MenuXoshiyali(matn1: "Telefon raqami muvaffaqiyatli o'zgartirildi");

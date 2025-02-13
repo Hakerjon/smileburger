@@ -11,10 +11,10 @@ class card {
   int? cardBalans;
 }
 
-void userBaza(
-    {String? kartaKimniki,
+void userBaza({
+    String? kartaKimniki,
     String? kartaRaqami,
-    int? kartaData,
+    String? kartaData,
     int? kartaPin,
     int? kartaTelefoni,
     int? kartaRaqamUzunligi}) {
@@ -25,16 +25,17 @@ void userBaza(
   kartaPin = userCard.cardPassword;
   kartaTelefoni = userCard.cardTelNumber;
   kartaRaqamUzunligi = 16;
-  while (kartaRaqami == null) {
-    MenuXoshiyali(matn1: "Karta raqamingizni kiriting: ");
+  kartaRaqami = "";
+  while (kartaRaqami == null || kartaRaqami == '') {
+    print(MenuXoshiyali(matn1: "Karta raqamingizni kiriting: "));
     kartaRaqami = stdin.readLineSync();
     // int kartaRaqamiUzunligi = kartaRaqami.length;
     while (kartaRaqami?.length != kartaRaqamUzunligi) {
-      MenuXoshiyali(
+      print(MenuXoshiyali(
           matn1:
-              "Karta raqami 16ta raqamdan iborat bo'lishi shart, qaytadan kiriting: ");
+              "Karta raqami 16ta raqamdan iborat bo'lishi shart, qaytadan kiriting: "));
       kartaRaqami = stdin.readLineSync();
     }
-    MenuXoshiyali(matn1: "Tizimga yangi karta muvaffaqiyatli qo'shildi");
+    print(MenuXoshiyali(matn1: "Tizimga yangi karta muvaffaqiyatli qo'shildi"));
   }
 }
