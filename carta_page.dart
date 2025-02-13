@@ -11,8 +11,8 @@ class card {
   int? cardBalans;
 }
 
-void userBaza({
-    String? kartaKimniki,
+void userBaza(
+    {String? kartaKimniki,
     String? kartaRaqami,
     String? kartaData,
     int? kartaPin,
@@ -26,6 +26,7 @@ void userBaza({
   kartaTelefoni = userCard.cardTelNumber;
   kartaRaqamUzunligi = 16;
   kartaRaqami = "";
+  kartaPin = 0601;
   while (kartaRaqami == null || kartaRaqami == '') {
     print(MenuXoshiyali(matn1: "Karta raqamingizni kiriting: "));
     kartaRaqami = stdin.readLineSync();
@@ -36,6 +37,7 @@ void userBaza({
               "Karta raqami 16ta raqamdan iborat bo'lishi shart, qaytadan kiriting: "));
       kartaRaqami = stdin.readLineSync();
     }
+
     print(MenuXoshiyali(matn1: "Tizimga yangi karta muvaffaqiyatli qo'shildi"));
   }
 }
