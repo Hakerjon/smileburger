@@ -2,7 +2,7 @@ import 'chek_shablon.dart';
 import 'dart:io';
 import 'carta_page.dart';
 
-void main(List<String> args) {
+void test(List<String> args) {
   final homeCard = card();
   homeCard.cardName = "Mansur Abdugaffarov";
   homeCard.cardPassword = 1234;
