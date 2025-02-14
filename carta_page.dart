@@ -1,14 +1,13 @@
 import 'chek_shablon.dart';
 import 'dart:io';
 
-class card {
+class BankCarta {
   String? cardName;
   String? cardNumber;
   String? cardData;
   int? cardPassword;
-  int? cardTelNumber;
-  String? cardUserName;
   int? cardBalans;
+  int? cardTelNumber;
 }
 
 void userBaza(
@@ -18,7 +17,7 @@ void userBaza(
     int? kartaPin,
     int? kartaTelefoni,
     int? kartaRaqamUzunligi}) {
-  final userCard = card();
+  final userCard = BankCarta();
   kartaKimniki = userCard.cardName;
   kartaRaqami = userCard.cardNumber;
   kartaData = userCard.cardData;

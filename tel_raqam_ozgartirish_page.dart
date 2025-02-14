@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'IbrohimHome.dart';
 import 'carta_page.dart';
 import 'chek_shablon.dart';
 
@@ -9,7 +9,7 @@ import 'chek_shablon.dart';
 // }
 
 void telNumberEditing([String? yangiTelNumber]) {
-  final homeCard = card();
+  final homeCard = BankCarta();
   homeCard.cardTelNumber = 998903113010;
   String? joriyTelNumber;
   bool telRaqamChanged = true;
@@ -25,6 +25,7 @@ void telNumberEditing([String? yangiTelNumber]) {
           matn1: "Telefon raqami o'zgardi: ${yangiTelNumber} ga"));
       yangiTelNumber = homeCard.cardTelNumber.toString();
       telRaqamChanged = false;
+        main();
     } else {
       print(MenuXoshiyali(
           matn1: "Joriy telefon raqami noto'g'ri, iltimos qaytadan kiriting"));

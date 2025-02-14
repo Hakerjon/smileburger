@@ -18,7 +18,7 @@ String chekError({required String chekMatnError}) {
   }
 }
 
-String chekSuccess({required String chekMatn1, required String chekMatn2}) {
+String chekSuccess({required String chekMatn1, required chekMatn2}) {
   if (chekMatn1.isNotEmpty) {
     final now = DateTime.now();
     String chekVaqti =
@@ -26,7 +26,7 @@ String chekSuccess({required String chekMatn1, required String chekMatn2}) {
     String chekMatni = '''
  _________________________
 |${chekVaqti}         |
-|                         |
+|-----------CHEK----------|
 |${chekMatn1}
 |${chekMatn2}
 |                         |
@@ -40,19 +40,20 @@ String chekSuccess({required String chekMatn1, required String chekMatn2}) {
   }
 }
 
-String MenuXoshiyali({required matn1, matn2, matn3, matn4, matn5, matn6}) {
+String MenuXoshiyali(
+    {required matn1, matn2, matn3, matn4, matn5, matn6, matn7}) {
   if (matn1.isNotEmpty) {
     String stars = "*";
     String chekMatni = '''
 ${stars * 30}
 ||    
 ||                       
-||=>${matn1}     ${matn2 ?? ""}
+|| ${matn1}         ${matn2 ?? ""}
 || ${matn3 ?? ""}   ${matn4 ?? ""}
 || ${matn5 ?? ""}   ${matn6 ?? ""}
-||
+|| ${matn7 ?? ""}
 ||                       
-||             
+||            
 ${stars * 30}
 ''';
     return chekMatni;
