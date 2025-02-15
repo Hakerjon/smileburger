@@ -3,9 +3,15 @@ import 'IbrohimHome.dart';
 import 'balans_page.dart';
 import 'chek_shablon.dart';
 
-
 void pulYechish({required int summa}) {
-  print(MenuXoshiyali(matn1: "1 => 50 000 ming",matn2: "2 => 100 000 ming",matn3: "3 => 150 000 ming",matn4: "4 => 200 000 ming",matn5: "5 => 250 000 ming",matn6: "6 => 300 000 ming", matn7:"7 => Boshqa summa"));
+  print(MenuXoshiyali(
+      matn1: "1 => 50 000 ming",
+      matn2: "2 => 100 000 ming",
+      matn3: "3 => 150 000 ming",
+      matn4: "4 => 200 000 ming",
+      matn5: "5 => 250 000 ming",
+      matn6: "6 => 300 000 ming",
+      matn7: "7 => Boshqa summa"));
 
   bool natija = false;
   int? bolim;

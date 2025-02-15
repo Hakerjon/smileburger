@@ -4,7 +4,6 @@ import 'carta_page.dart';
 import 'chek_shablon.dart';
 import 'error_page.dart';
 
-
 int? pinkod(int? pinkodDefault) {
   final homeCard = BankCarta();
   homeCard.cardName = "Mansur Abdugaffarov";
@@ -18,7 +17,7 @@ int? pinkod(int? pinkodDefault) {
         matn1: "Xatolik! Noto'g'ri PIN-kod!,qaytadan urinib ko'ring"));
     joriyPin = int.tryParse("${stdin.readLineSync()}") ?? 0;
     pinBlok--;
-    print( " Sizda ${pinBlok}ta urinish qoldi");
+    print(" Sizda ${pinBlok}ta urinish qoldi");
     if (joriyPin == pinkodDefault) {
       print(MenuXoshiyali(
           matn1: "PIN kod to'g'ri! Endi yangi PIN kodingizni kiriting!"));
@@ -36,7 +35,7 @@ int? pinkod(int? pinkodDefault) {
             main();
             break;
           default:
-            error();
+            print(MenuXoshiyali(matn1: "Siz kiritgan bo'lim mavjud emas"));
             break;
         }
       } else {
