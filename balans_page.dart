@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'IbrohimHome.dart';
-import 'carta_page.dart';
 import 'chek_shablon.dart';
 
 void balans({required int summa}) {

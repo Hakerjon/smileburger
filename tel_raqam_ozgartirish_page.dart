@@ -25,7 +25,7 @@ void telNumberEditing([String? yangiTelNumber]) {
           matn1: "Telefon raqami o'zgardi: ${yangiTelNumber} ga"));
       yangiTelNumber = homeCard.cardTelNumber.toString();
       telRaqamChanged = false;
-        main();
+      main();
     } else {
       print(MenuXoshiyali(
           matn1: "Joriy telefon raqami noto'g'ri, iltimos qaytadan kiriting"));
