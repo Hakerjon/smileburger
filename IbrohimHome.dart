@@ -16,7 +16,7 @@ void main() {
   userCard.cardPassword = 0607;
   userCard.cardBalans = 500000;
 
-  print("Bankamatga hush kelibsiz");
+  print("Bankomatga xush kelibsiz");
 
   bool isValiedPassword = false;
   int userCardPassword = 0;
@@ -49,8 +49,12 @@ void main() {
         break;
       case 2:
         pulYechish(summa: userCard.cardBalans!);
+        print(userCard.cardBalans);
+        print(yechilganSumma);
         userCard.cardBalans = userCard.cardBalans! - yechilganSumma;
-        print(chekSuccess(chekMatn1: "Sizning hisob raqamingizda", chekMatn2: "${userCard.cardBalans} ming qoldi"));
+        print(chekSuccess(
+            chekMatn1: "Sizning hisob raqamingizda",
+            chekMatn2: "${userCard.cardBalans} ming so'm qoldi"));
         break;
       case 3:
         telNumberEditing();

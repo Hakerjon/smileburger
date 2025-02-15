@@ -2,7 +2,6 @@ import 'dart:io';
 import 'IbrohimHome.dart';
 import 'carta_page.dart';
 import 'chek_shablon.dart';
-import 'error_page.dart';
 
 int? pinkod(int? pinkodDefault) {
   final homeCard = BankCarta();

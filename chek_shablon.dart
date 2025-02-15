@@ -62,12 +62,3 @@ ${stars * 30}
   }
 }
 
-// void main(List<String> args) {
-//   // print(chekError(chekMatnError: "Nimadir xato ketdimi"));
-//   // print(chekSuccess(
-//   //     chekMatn1: "Amaliyot muvaffaqiyatli", chekMatn2: "amalga oshirildi!"));
-//   // print(MenuXoshiyali(matn1: "Pul yechish", matn6: "Chiqish"));
-//   print(chekSuccess(
-//       chekMatn1: "to'lov muvaffaqiyatli", chekMatn2: "amalga oshiriladi"));
-//   print(MenuXoshiyali(matn1: "Balansni ko'rish", matn2: "Pinni almashtirish"));
-// }

@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'IbrohimHome.dart';
+import 'carta_page.dart';
 import 'chek_shablon.dart';
-import 'error_page.dart';
 
 void balans({required int summa}) {
   print(MenuXoshiyali(matn1: "Chek => (Ok/No) "));
@@ -29,7 +29,9 @@ void balans({required int summa}) {
 }
 
 void chek(int sum) {
+  // final userCard = BankCarta();
+  // userCard.cardBalans - yechilganSumma;
   print(chekSuccess(
-      chekMatn1: "Sizning balansinggizdan $sum som yechildi",
-      chekMatn2: "Umumiy summa : $sum"));
+      chekMatn1: "Sizning balansinggizdan $sum so'm yechildi",
+      chekMatn2: "Balansdagi qoldiq : $sum"));
 }
