@@ -1,0 +1,1 @@
+Faqat Terminalda ishlash uchun
