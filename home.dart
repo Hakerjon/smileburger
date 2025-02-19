@@ -11,7 +11,7 @@ double jamiNarx = 0;
 int yechilganSumma = 0;
 // List<String> buyurtmalar = [];
 Future<void> main() async {
-  await loading(kutishMatni: '--==Smile burger==-- Xush kelibsiz');
+  await loading(kutishMatni: '--==Smile burger==-- Xush kelibsiz\n');
   // await kutishRejimi();
   while (true) {
     shaxsiyUI(
